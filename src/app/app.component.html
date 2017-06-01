@@ -1,0 +1,31 @@
+<fieldset>
+  <legend>Parent current view child count ({{ parentCount }})</legend>
+  <button (click)="onParentClick()">累加View Child Count</button>
+  <button (click)="onViewChildReset()">重置View Child Count</button>
+</fieldset>
+<app-view-child>
+</app-view-child>
+<app-view-child>
+</app-view-child>
+
+<app-content-child>
+  <h1>標題一</h1>
+  <h1 #lastHead>標題二</h1>
+</app-content-child>
+
+<app-ng-content>
+  <!--定義class child-header -->
+  <div class="child-header">
+    <strong>This is Parent Templage Define Header</strong>
+  </div>
+
+  <!--定義屬性 child-body -->
+  <div child-body>
+    這個是寫在Parent的Div，需在Child端透過宣告 &lt;ng-content&gt;&lt;/ng-content&gt; 的方式傳入
+  </div>
+
+  <!--自定義Html Attribute detail-type & value = child-footer  -->
+  <div detail-type="child-footer">
+    <strong>This is Parent Templage Define Footer</strong>
+  </div>
+</app-ng-content>

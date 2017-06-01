@@ -1,0 +1,20 @@
+<fieldset>
+  <legend>Ng Conent 範例</legend>
+  <!-- 單一嵌入 -->
+  <!--<ng-content></ng-content>-->
+
+  <!-- 多點嵌入 透過class選擇 -->
+  <ng-content select=".child-header"></ng-content>
+
+  <p>child up body</p>
+
+  <!-- 多點嵌入 透過屬性選擇 -->
+  <ng-content select="[child-body]"></ng-content>
+
+  <p>child down body</p>
+
+  <p>Child Count : {{ childCount }}</p>
+
+  <!-- 多點嵌入 透過自定義Html Attribute & value 選擇 -->
+  <ng-content select="[detail-type=child-footer]"></ng-content>
+</fieldset>
